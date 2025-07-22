@@ -15,8 +15,21 @@
 
 #include "Animal.hpp"
 
-class WrongAnimal: public Animal {
-
+class WrongAnimal {
+	protected:
+		std::string _type;
+	public:
+		//constructor
+		WrongAnimal();
+		//destructor
+		virtual ~WrongAnimal();
+		//copy constructor
+		WrongAnimal(const WrongAnimal &other);
+		//copy assignment operator
+		WrongAnimal& operator=(const WrongAnimal &other);
+		//methods
+		virtual void makeSound(void) const;
+		virtual const std::string &getType(void) const;
 };
 
 #endif

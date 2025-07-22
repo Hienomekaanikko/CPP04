@@ -30,7 +30,7 @@ class Animal {
 		//make sound function
 		virtual void makeSound(void);
 		//
-		virtual std::string getType(void);
+		virtual const std::string &getType(void) const;
 };
 
 #endif

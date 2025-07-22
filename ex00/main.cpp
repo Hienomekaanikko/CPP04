@@ -13,13 +13,18 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int	main(void){
-	Dog doggie;
-	Cat	cat;
+	Dog doggo;
+	Cat	kitty;
+	WrongCat kitty2;
 
-	doggie.makeSound();
-	std::cout << "Type of the dog is: " << doggie.getType() << std::endl;
-	cat.makeSound();
-	std::cout << "Type of the cat is: " << cat.getType() << std::endl;
+	doggo.makeSound();
+	std::cout << "Type of the dog is: " << doggo.getType() << std::endl;
+	kitty.makeSound();
+	std::cout << "Type of the cat is: " << kitty.getType() << std::endl;
+	kitty2.makeSound();
+	std::cout << "Type of the animal is: " << kitty2.getType() << std::endl;
 }
