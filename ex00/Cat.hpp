@@ -26,7 +26,7 @@ class Cat: public Animal {
 		//copy assignment constructor
 		Cat& operator=(const Cat &other);
 		//make sound function
-		void makeSound(void);
+		void makeSound(void) const;
 };
 
 #endif

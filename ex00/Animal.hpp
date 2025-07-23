@@ -28,9 +28,9 @@ class Animal {
 		//copy assignment constructor
 		Animal& operator=(const Animal &other);
 		//make sound function
-		virtual void makeSound(void);
+		virtual void makeSound(void) const;
 		//
-		virtual const std::string &getType(void) const;
+		const std::string &getType(void) const;
 };
 
 #endif

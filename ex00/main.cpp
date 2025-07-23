@@ -17,14 +17,31 @@
 #include "WrongCat.hpp"
 
 int	main(void){
-	Dog doggo;
-	Cat	kitty;
-	WrongCat kitty2;
+	std::cout << "Default case: " << std::endl;
+	const Animal *meta = new Animal();
+	std::cout << "Type of animal: " << meta->getType() << std::endl;
+	meta->makeSound();
+	delete meta;
+	std::cout << "-----------------------------------" << std::endl;
 
-	doggo.makeSound();
-	std::cout << "Type of the dog is: " << doggo.getType() << std::endl;
-	kitty.makeSound();
-	std::cout << "Type of the cat is: " << kitty.getType() << std::endl;
-	kitty2.makeSound();
-	std::cout << "Type of the animal is: " << kitty2.getType() << std::endl;
+	std::cout << "Cat case: " << std::endl;
+	meta = new Cat();
+	std::cout << "Type of animal: " << meta->getType() << std::endl;
+	meta->makeSound();
+	delete meta;
+	std::cout << "-----------------------------------" << std::endl;
+
+	std::cout << "Dog case: " << std::endl;
+	meta = new Dog();
+	std::cout << "Type of animal: " << meta->getType() << std::endl;
+	meta->makeSound();
+	delete meta;
+	std::cout << "-----------------------------------" << std::endl;
+
+	std::cout << "Wrong animal case: " << std::endl;
+	const WrongAnimal *wrongmeta = new WrongCat();
+	std::cout << "Type of animal: " << meta->getType() << std::endl;
+	meta->makeSound();
+	delete meta;
+	std::cout << "-----------------------------------" << std::endl;
 }
