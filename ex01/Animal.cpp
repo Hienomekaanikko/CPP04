@@ -5,37 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 13:44:28 by msuokas           #+#    #+#             */
-/*   Updated: 2025/07/22 14:56:37 by msuokas          ###   ########.fr       */
+/*   Created: 2025/09/09 10:07:12 by msuokas           #+#    #+#             */
+/*   Updated: 2025/09/09 15:05:19 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(): _type("default"){
-	std::cout << "🛠️ Called default constructor on Animal" << std::endl;
+Animal::Animal() {
+	std::cout << "Animal: Default constructor called" << std::endl;
+	type = "Default_Animal";
 }
 
-Animal::~Animal(){
-	std::cout << "🛠️ Called destructor on Animal" << std::endl;
+Animal::Animal(const std::string& type): type(type) {
+	std::cout << "Animal: constructor called with type " << type << std::endl;
 }
 
-Animal::Animal(const Animal &other): _type(other._type){
-	std::cout << "🛠️ Called copy constructor on Animal" << std::endl;
+Animal::~Animal() {
+	std::cout << "Animal: Destructor called on type " << type << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &other){
-	std::cout << "🛠️ Called copy assignment constructor on Animal" << std::endl;
-	if (this == &other)
-		return *this;
-	this->_type = other._type;
+Animal::Animal(Animal& other): type(other.type) {
+	std::cout << "Animal: Copy constructor called. Animal " << type << " is now " << other.type << std::endl;
+}
+
+Animal& Animal::operator=(const Animal& other) {
+	if (this != &other) {
+		std::cout << "Animal: Copy assignment operator called. Animal " << type << " has now values of " << other.type << std::endl;
+		type = other.type;
+	}
 	return *this;
 }
 
-void Animal::makeSound(void) const{
-	std::cout << "Here an animal makes some sound! 📣" << std::endl;
+void Animal::makeSound() const {
+	std::cout << type << " ❌: Non specific animal sound" << std::endl;
 }
 
-const std::string& Animal::getType(void) const {
-	return this->_type;
+const std::string& Animal::getType() const{
+	return type;
 }

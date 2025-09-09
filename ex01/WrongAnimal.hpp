@@ -5,32 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 14:59:48 by msuokas           #+#    #+#             */
-/*   Updated: 2025/07/22 15:00:54 by msuokas          ###   ########.fr       */
+/*   Created: 2025/09/09 11:52:29 by msuokas           #+#    #+#             */
+/*   Updated: 2025/09/09 11:53:03 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#pragma once
 
-#include "Animal.hpp"
+#include <iostream>
 
 class WrongAnimal {
 	protected:
-		std::string _type;
+		std::string type;
 	public:
-		//constructor
 		WrongAnimal();
-		//destructor
-		virtual ~WrongAnimal();
-		//copy constructor
-		WrongAnimal(const WrongAnimal &other);
-		//copy assignment operator
-		WrongAnimal& operator=(const WrongAnimal &other);
-		//methods
-		virtual void makeSound(void) const;
-		virtual const std::string &getType(void) const;
+		WrongAnimal(const std::string& type);
+		~WrongAnimal();
+		WrongAnimal(WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+
+		const std::string& getType() const;
+		virtual void makeSound() const;
 };
-
-#endif
-

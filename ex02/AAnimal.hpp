@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 13:34:59 by msuokas           #+#    #+#             */
-/*   Updated: 2025/07/22 14:56:47 by msuokas          ###   ########.fr       */
+/*   Created: 2025/09/09 10:08:22 by msuokas           #+#    #+#             */
+/*   Updated: 2025/09/09 15:22:06 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#pragma once
 
 #include <iostream>
-#include "Brain.hpp"
 
-class Animal {
+class AAnimal {
 	protected:
-		std::string	_type;
+		std::string type;
 	public:
-		//default constructor
-		Animal();
-		//destructor
-		virtual ~Animal();
-		//copy constructor
-		Animal(const Animal &other);
-		//copy assignment constructor
-		Animal& operator=(const Animal &other);
-		//make sound function
-		virtual void makeSound(void) const = 0;
-		//
-		const std::string &getType(void) const;
-};
+		AAnimal();
+		AAnimal(const std::string& type);
+		virtual ~AAnimal();
+		AAnimal(AAnimal& other);
+		AAnimal& operator=(const AAnimal& other);
 
-#endif
+		const std::string& getType() const;
+		virtual void makeSound() const = 0;
+};
