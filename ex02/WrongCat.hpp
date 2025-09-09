@@ -5,25 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 15:01:44 by msuokas           #+#    #+#             */
-/*   Updated: 2025/07/22 15:03:59 by msuokas          ###   ########.fr       */
+/*   Created: 2025/09/09 11:54:04 by msuokas           #+#    #+#             */
+/*   Updated: 2025/09/09 11:57:40 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#pragma once
 
 #include "WrongAnimal.hpp"
 
-class WrongCat: public WrongAnimal{
+class WrongCat: public WrongAnimal {
 	public:
 		WrongCat();
+		WrongCat(std::string& type);
 		~WrongCat();
-		WrongCat(const WrongCat &other);
-		WrongCat &operator=(const WrongCat &other);
+		WrongCat(const WrongCat& other);
+		WrongCat& operator=(const WrongCat& other);
+
+		void makeSound() const override;
 };
-
-#endif
-
-
-

@@ -1,9 +1,9 @@
 CC = c++
-FLAGS = -Wall -Werror -Wextra
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+FLAGS = -Wall -Wextra -Werror -std=c++20
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
-RM = rm -f
 NAME = animal
+RM = rm -f
 
 all: $(NAME)
 
