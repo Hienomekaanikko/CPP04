@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:23:32 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:29:55 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/09 16:08:58 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,34 @@ int main(void) {
 	for (int i = 0; i < 20; i++) {
 		delete animalArr[i];
 	}
+
+	std::cout << "\033[1;32m\n---------------------------------------------------------\n\033[0m";
+
+	std::cout << "\033[1;32m\nTesting Dog Copy Constructor\n\n\033[0m";
+
+	Dog copyDog(newDog);
+
+	std::cout << "Original Dog Thought [at index 0]: " << newDog.getIdea(0) << std::endl;
+	std::cout << "Copied Dog Thought   [at index 0]: " << copyDog.getIdea(0) << std::endl;
+
+	newDog.setIdea(0, "💭 I'm thinking something new! 💭");
+
+	std::cout << "\nAfter changing original Dog's idea:\n";
+	std::cout << "Original Dog Thought [at index 0]: " << newDog.getIdea(0) << std::endl;
+	std::cout << "Copied Dog Thought   [at index 0]: " << copyDog.getIdea(0) << std::endl;
+
+	std::cout << "\033[1;32m\nTesting Dog Copy Assignment Operator\n\n\033[0m";
+	Dog assignedDog;
+	assignedDog = newDog;
+
+	std::cout << "Original Dog Thought [at index 1]: " << newDog.getIdea(1) << std::endl;
+	std::cout << "Assigned Dog Thought [at index 1]: " << assignedDog.getIdea(1) << std::endl;
+
+	newDog.setIdea(1, "💭 I want treats now 💭");
+
+	std::cout << "\nAfter changing original Dog's idea:\n";
+	std::cout << "Original Dog Thought [at index 1]: " << newDog.getIdea(1) << std::endl;
+	std::cout << "Assigned Dog Thought [at index 1]: " << assignedDog.getIdea(1) << std::endl;
 
 	return 0;
 }
