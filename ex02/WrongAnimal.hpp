@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:52:29 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 11:53:03 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/09 16:03:26 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class WrongAnimal {
 		WrongAnimal& operator=(const WrongAnimal& other);
 
 		const std::string& getType() const;
-		virtual void makeSound() const;
+		void makeSound() const;
 };

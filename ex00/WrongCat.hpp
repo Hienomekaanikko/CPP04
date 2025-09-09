@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:54:04 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:44:30 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/09 15:56:28 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ class WrongCat: public WrongAnimal {
 		WrongCat(const WrongCat& other);
 		WrongCat& operator=(const WrongCat& other);
 
-		void makeSound() const override;
+		void makeSound() const;
 };
