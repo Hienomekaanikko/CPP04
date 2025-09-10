@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 12:42:20 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 12:44:41 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:27:25 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Brain {
 	public:
 		Brain();
 		Brain(std::string ideas[]);
-		virtual ~Brain();
+		~Brain();
 		Brain(const Brain& other);
 		Brain& operator=(const Brain& other);
 

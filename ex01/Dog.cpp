@@ -6,19 +6,18 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:21:37 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 13:14:11 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 15:24:51 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() {
+Dog::Dog(): Animal("Dog") {
 	std::cout << "Dog: Default constructor called" << std::endl;
-	type = "Dog";
 	mind = new Brain();
 }
 
-Dog::Dog(std::string& type): Animal(type) {
+Dog::Dog(const std::string& type): Animal(type) {
 	std::cout << "Dog: constructor called with type " << type << std::endl;
 	mind = new Brain();
 }
@@ -57,4 +56,6 @@ std::string Dog::getIdea(int index) const {
 void Dog::setIdea(int index, std::string idea) {
 	if (index >= 0 && index < 100)
 		mind->setIdea(index, idea);
+	else if (index >= 100)
+		std::cout << "WARNING! OVERTHINKING IN PROCESS: " << type << " can handle only 100 thoughts!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:22 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 12:46:52 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:48:45 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat: public AAnimal {
 		Brain* mind;
 	public:
 		Cat();
-		Cat(std::string& type);
+		Cat(const std::string& type);
 		virtual ~Cat();
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);

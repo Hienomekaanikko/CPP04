@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:52:29 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 11:46:09 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 15:03:00 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class WrongAnimal {
 	public:
 		WrongAnimal();
 		WrongAnimal(const std::string& type);
-		~WrongAnimal();
-		WrongAnimal(WrongAnimal& other);
+		virtual ~WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal& operator=(const WrongAnimal& other);
 
 		const std::string& getType() const;

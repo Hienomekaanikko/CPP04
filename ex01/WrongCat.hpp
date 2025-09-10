@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:54:04 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 12:46:34 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:48:04 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class WrongCat: public WrongAnimal {
 	public:
 		WrongCat();
-		WrongCat(std::string& type);
+		WrongCat(const std::string& type);
 		virtual ~WrongCat();
 		WrongCat(const WrongCat& other);
 		WrongCat& operator=(const WrongCat& other);

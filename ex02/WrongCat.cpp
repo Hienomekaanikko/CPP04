@@ -6,15 +6,14 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:53:48 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 16:03:42 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:50:01 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat() {
+WrongCat::WrongCat(): WrongAnimal("Default_WrongCat"){
 	std::cout << "WrongCat: Default constructor called" << std::endl;
-	type = "Default_WrongCat";
 }
 
 WrongCat::WrongCat(std::string& type): WrongAnimal(type) {

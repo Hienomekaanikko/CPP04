@@ -6,18 +6,17 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:21:37 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 13:07:21 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:45:55 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() {
+Dog::Dog(): Animal("Dog"){
 	std::cout << "Dog: Default constructor called" << std::endl;
-	type = "Dog";
 }
 
-Dog::Dog(std::string& type): Animal(type) {
+Dog::Dog(const std::string& type): Animal(type) {
 	std::cout << "Dog: constructor called with type " << type << std::endl;
 }
 

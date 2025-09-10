@@ -6,19 +6,18 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:06 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 13:14:01 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 15:10:25 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() {
+Cat::Cat(): Animal("Cat") {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	type = "Cat";
 	mind = new Brain();
 }
 
-Cat::Cat(std::string& type): Animal(type) {
+Cat::Cat(const std::string& type): Animal(type) {
 	std::cout << "Cat: constructor called with type " << type << std::endl;
 	mind = new Brain();
 }
@@ -57,4 +56,6 @@ std::string Cat::getIdea(int index) const {
 void Cat::setIdea(int index, std::string idea) {
 	if (index >= 0 && index < 100)
 		mind->setIdea(index, idea);
+	if (index >= 100)
+		std::cout << "WARNING! OVERTHINKING IN PROCESS: " << type << " can handle only 100 thoughts!" << std::endl;
 }
