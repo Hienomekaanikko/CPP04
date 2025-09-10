@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:07:12 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 11:49:08 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 13:00:41 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Animal::Animal(const std::string& type): type(type) {
 }
 
 Animal::~Animal() {
-	std::cout << "Animal: Destructor called on type " << type << std::endl;
+	std::cout << "Animal: Destructor called on " << type << std::endl;
 }
 
 Animal::Animal(Animal& other): type(other.type) {

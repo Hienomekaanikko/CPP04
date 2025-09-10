@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:21:49 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:56:45 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:46:08 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ class Dog: public Animal {
 	public:
 		Dog();
 		Dog(std::string& type);
-		~Dog();
+		virtual ~Dog();
 		Dog(const Dog& other);
 		Dog& operator=(const Dog& other);
 

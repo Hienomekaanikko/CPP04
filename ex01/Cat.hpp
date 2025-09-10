@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:22 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 14:34:58 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:44:45 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class Cat: public Animal {
 	public:
 		Cat();
 		Cat(std::string& type);
-		~Cat();
+		virtual ~Cat();
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);
 
-		void makeSound() const override;
-		std::string getIdea(int index) const;
-		void setIdea(int index, std::string idea);
+		virtual void makeSound() const override;
+		virtual std::string getIdea(int index) const;
+		virtual void setIdea(int index, std::string idea);
 };
