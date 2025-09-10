@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:08:22 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:08:54 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:32:28 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,6 @@ class Animal {
 
 		const std::string& getType() const;
 		virtual void makeSound() const;
+		virtual std::string getIdea(int index) const = 0;
+		virtual void setIdea(int index, std::string idea) = 0;
 };

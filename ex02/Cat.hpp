@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:22 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:24:33 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:46:52 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cat: public AAnimal {
 	public:
 		Cat();
 		Cat(std::string& type);
-		~Cat();
+		virtual ~Cat();
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);
 

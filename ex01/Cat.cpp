@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:06 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:28:24 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 13:14:01 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cat::Cat() {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	type = "Default_Doge";
+	type = "Cat";
 	mind = new Brain();
 }
 
@@ -35,11 +35,11 @@ Cat::Cat(const Cat& other): Animal(other.type){
 
 Cat& Cat::operator=(const Cat& other) {
 	if (this != &other) {
+		std::cout << "Cat: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 		type = other.type;
 		if (mind)
 			delete mind;
 		mind = new Brain(*other.mind);
-		std::cout << "Cat: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 	}
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:21:37 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:24:48 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:40:23 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog() {
 	std::cout << "Dog: Default constructor called" << std::endl;
-	type = "Default_Doge";
+	type = "Dog";
 	mind = new Brain();
 }
 

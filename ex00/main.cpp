@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:23:32 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 14:48:05 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 13:08:57 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ int main(void) {
 	std::cout << "\033[1;32m\n---------------------------------------------------------\n\n\033[0m";
 
 	std::string anim1 = "Non_Specified";
-	std::string dog1 = "Nalle";
-	std::string cat1 = "Simba";
+	std::string dog1 = "Nalle_Dog";
+	std::string cat1 = "Simba_Cat";
 
-	std::cout << "\033[1;32mType tests (type is set):\n\n\033[0m";
+	std::cout << "\033[1;32mType tests (type is set to something else):\n\n\033[0m";
 	const Animal* anim = new Animal(anim1);
 	const Animal* doggo = new Dog(dog1);
 	const Animal* kittie = new Cat(cat1);
@@ -68,15 +68,15 @@ int main(void) {
 
 	std::cout << "\033[1;32m\nCopy constructor tests:\n\n\033[0m";
 
-	std::string dog2 = "Grumpy";
-	std::string cat2 = "Fluffer";
+	std::string dog2 = "Grumpy_Dog";
+	std::string cat2 = "Fluffer_Cat";
 	std::string wrongcat1 = "Wrong_Cat";
 
 	Dog originalDog(dog2);
-	Dog copyDog(originalDog);  // <-- invokes Dog's copy constructor
+	Dog copyDog(originalDog);
 
 	Cat originalCat(cat2);
-	Cat copyCat = originalCat;  // <-- also invokes Cat's copy constructor
+	Cat copyCat = originalCat;
 	WrongCat originalWrongCat(wrongcat1);
 	WrongCat copyWrongCat(originalWrongCat);
 

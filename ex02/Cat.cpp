@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:06 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 15:28:17 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 12:40:16 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cat::Cat() {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	type = "Default_Doge";
+	type = "Cat";
 	mind = new Brain();
 }
 
