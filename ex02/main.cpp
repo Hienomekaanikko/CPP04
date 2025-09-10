@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:23:32 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 16:11:33 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:11:35 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 int main(void) {
 
-	std::cout << "\033[1;32m\nSetting up dog 'Nalle' and cat 'Nala'\n\n\033[0m";
+	std::cout << "\033[1;32m\nSetting up dog 'Nalle' and cat 'Simba'\n\n\033[0m";
 	std::string dog = "Nalle";
-	std::string cat = "Nala";
+	std::string cat = "Simba";
 
 	Dog newDog(dog);
 	Cat newCat(cat);
@@ -43,12 +43,12 @@ int main(void) {
 
 	std::cout << "\033[1;32m\n---------------------------------------------------------\n\033[0m";
 
-	std::cout << "\033[1;32m\n****Setting up thoughts for the brain of 'Nala'****\n\033[0m";
+	std::cout << "\033[1;32m\n****Setting up thoughts for the brain of 'Simba'****\n\033[0m";
 	for (int i = 0; i < 100; i++) {
 		newCat.setIdea(i, "💭 Thinking about pushing this wicked thing off the table 💭");
 	}
 
-	std::cout << "\033[1;32m\nReading the thoughts from the brain of 'Nala'\n\n\033[0m";
+	std::cout << "\033[1;32m\nReading the thoughts from the brain of 'Simba'\n\n\033[0m";
 	for (int i = 0; i < 100; i++) {
 		std::cout << i + 1 << ": ";
 		std::cout << newCat.getIdea(i) << std::endl;

@@ -6,19 +6,18 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:21:37 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 12:40:23 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 15:12:52 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() {
+Dog::Dog(): AAnimal("Dog") {
 	std::cout << "Dog: Default constructor called" << std::endl;
-	type = "Dog";
 	mind = new Brain();
 }
 
-Dog::Dog(std::string& type): AAnimal(type) {
+Dog::Dog(const std::string& type): AAnimal(type) {
 	std::cout << "Dog: constructor called with type " << type << std::endl;
 	mind = new Brain();
 }
@@ -35,11 +34,11 @@ Dog::Dog(const Dog& other): AAnimal(other.type){
 
 Dog& Dog::operator=(const Dog& other) {
 	if (this != &other) {
+		std::cout << "Dog: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 		type = other.type;
 		if (mind)
 			delete mind;
 		mind = new Brain(*other.mind);
-		std::cout << "Dog: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 	}
 	return *this;
 }
@@ -57,4 +56,6 @@ std::string Dog::getIdea(int index) const {
 void Dog::setIdea(int index, std::string idea) {
 	if (index >= 0 && index < 100)
 		mind->setIdea(index, idea);
+	else if (index >= 100)
+		std::cout << "WARNING! OVERTHINKING IN PROCESS: " << type << " can handle only 100 thoughts!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 11:52:46 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/09 16:03:14 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 14:59:33 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ WrongAnimal::~WrongAnimal() {
 	std::cout << "WrongAnimal: Destructor called on type " << type << std::endl;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal& other): type(other.type) {
+WrongAnimal::WrongAnimal(const WrongAnimal& other): type(other.type) {
 	std::cout << "WrongAnimal: Copy constructor called. WrongAnimal " << type << " is now " << other.type << std::endl;
 }
 

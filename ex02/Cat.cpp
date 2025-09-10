@@ -6,19 +6,18 @@
 /*   By: msuokas <msuokas@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:20:06 by msuokas           #+#    #+#             */
-/*   Updated: 2025/09/10 12:40:16 by msuokas          ###   ########.fr       */
+/*   Updated: 2025/09/10 15:12:27 by msuokas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() {
+Cat::Cat(): AAnimal("Cat") {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	type = "Cat";
 	mind = new Brain();
 }
 
-Cat::Cat(std::string& type): AAnimal(type) {
+Cat::Cat(const std::string& type): AAnimal(type) {
 	std::cout << "Cat: constructor called with type " << type << std::endl;
 	mind = new Brain();
 }
@@ -35,11 +34,11 @@ Cat::Cat(const Cat& other): AAnimal(other.type){
 
 Cat& Cat::operator=(const Cat& other) {
 	if (this != &other) {
+		std::cout << "Cat: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 		type = other.type;
 		if (mind)
 			delete mind;
 		mind = new Brain(*other.mind);
-		std::cout << "Cat: Copy assignment operator called. " << type << " is now " << other.type << std::endl;
 	}
 	return *this;
 }
@@ -57,4 +56,6 @@ std::string Cat::getIdea(int index) const {
 void Cat::setIdea(int index, std::string idea) {
 	if (index >= 0 && index < 100)
 		mind->setIdea(index, idea);
+	if (index >= 100)
+		std::cout << "WARNING! OVERTHINKING IN PROCESS: " << type << " can handle only 100 thoughts!" << std::endl;
 }
